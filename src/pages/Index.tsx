@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, TrendingUp, Globe, Star, Zap, Users } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -185,26 +186,32 @@ const Index = () => {
       {/* Hero Header */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
-        <div className="relative container mx-auto px-4 py-16 text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-6 animate-glow-pulse">
-              SearchTrends Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Discover what the world is searching for with real-time celebrity insights, trending questions, and web analytics
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4 text-primary" />
-                <span>45M+ Users</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="h-4 w-4 text-primary" />
-                <span>Real-time Data</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-primary" />
-                <span>Trending Now</span>
+        <div className="relative container mx-auto px-4 py-16">
+          <div className="flex justify-between items-start mb-8">
+            <div></div>
+            <ThemeToggle />
+          </div>
+          <div className="text-center">
+            <div className="animate-fade-in">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-6 animate-glow-pulse">
+                SearchTrends Pro
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Discover what the world is searching for with real-time celebrity insights, trending questions, and web analytics
+              </p>
+              <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Users className="h-4 w-4 text-primary" />
+                  <span>45M+ Users</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Zap className="h-4 w-4 text-primary" />
+                  <span>Real-time Data</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Star className="h-4 w-4 text-primary" />
+                  <span>Trending Now</span>
+                </div>
               </div>
             </div>
           </div>
